@@ -7,6 +7,15 @@
     <title>Shrimp Farm Accounting Management - Portfolio</title>
     <meta name="description" content="Project Case Study: Shrimp Farm Accounting Management System">
 
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
         rel="stylesheet">
@@ -111,11 +120,6 @@
         <div class="container reveal">
             <div class="project-case-study">
                 <div class="case-header">
-                    <svg class="case-icon" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-4H8l4-4 4 4h-3v4z"
-                            transform="rotate(180 12 12)" />
-                    </svg>
                     <h3 class="case-title">Shrimp Farm Accounting Management System</h3>
                 </div>
 
@@ -144,6 +148,18 @@
                         <span style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Role
                             System:</span>
                         <span style="color: var(--text-muted);">Superadmin, Admin, Staff income, Staff expense</span>
+                    </div>
+                </div>
+
+                <!-- Project Slider -->
+                <div class="case-slider-container reveal">
+                    <div class="case-slider">
+                        <div class="slider-item">
+                            <img src="./website-utjm.png" alt="Website UTJM">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./utjm2.png" alt="Progress UTJM">
+                        </div>
                     </div>
                 </div>
 
@@ -189,43 +205,15 @@
                 <div class="case-row grid-2-images">
                     <div class="image-box">
                         <h4>Daily progress monitoring</h4>
-                        <div class="sheet-mockup" style="max-width: 100%; height: auto;">
-                            <div class="sheet-row sheet-header"></div>
-                            <div class="sheet-row sheet-item">
-                                <div class="sheet-cell"></div>
-                                <div class="sheet-cell"></div>
-                                <div class="sheet-cell green"></div>
-                            </div>
-                            <div class="sheet-row sheet-item">
-                                <div class="sheet-cell"></div>
-                                <div class="sheet-cell"></div>
-                                <div class="sheet-cell light"></div>
-                            </div>
-                            <div class="sheet-row sheet-item">
-                                <div class="sheet-cell green"></div>
-                                <div class="sheet-cell green"></div>
-                                <div class="sheet-cell"></div>
-                            </div>
+                        <div class="slider-item">
+                            <img src="./utjm2.png" alt="Daily Progress Monitoring">
                         </div>
                     </div>
 
                     <div class="image-box align-center">
                         <h4>Task Management</h4>
-                        <div class="mobile-mockup">
-                            <div class="mobile-notch"></div>
-                            <div class="mobile-task">
-                                <div class="mark green"></div>
-                                <div class="task-line"></div>
-                            </div>
-                            <div class="mobile-task">
-                                <div class="mark red"></div>
-                                <div class="task-line"></div>
-                            </div>
-                            <div class="mobile-task">
-                                <div class="mark green"></div>
-                                <div class="task-line"></div>
-                            </div>
-                            <div class="mobile-fab"></div>
+                        <div class="slider-item">
+                            <img src="./website-utjm.png" alt="Task Management System">
                         </div>
                     </div>
                 </div>

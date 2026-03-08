@@ -7,6 +7,15 @@
     <title>Laundry Hotel Management System - Portfolio</title>
     <meta name="description" content="Project Case Study: Laundry Hotel Management System">
 
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
         rel="stylesheet">
@@ -120,11 +129,6 @@
         <div class="container reveal">
             <div class="project-case-study">
                 <div class="case-header">
-                    <svg class="case-icon" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-4H8l4-4 4 4h-3v4z"
-                            transform="rotate(180 12 12)" />
-                    </svg>
                     <h3 class="case-title">Laundry Hotel Management System</h3>
                 </div>
 
@@ -158,6 +162,18 @@
                         pricing, and transaction recording. The system enables hotel staff to manage laundry workflows
                         efficiently, monitor item status, and maintain accurate operational records.
                     </p>
+                </div>
+
+                <!-- Project Slider -->
+                <div class="case-slider-container reveal">
+                    <div class="case-slider">
+                        <div class="slider-item">
+                            <img src="./texkleen.png" alt="Laundry System 1">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./texkleen2.png" alt="Laundry System 2">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="glass case-card list-card" style="margin-bottom: 32px;">

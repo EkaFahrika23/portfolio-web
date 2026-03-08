@@ -1,4 +1,72 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme Toggle Logic
+    const themeToggleBtn = document.createElement('button');
+    themeToggleBtn.className = 'theme-toggle-btn';
+    themeToggleBtn.setAttribute('aria-label', 'Toggle Theme');
+    themeToggleBtn.innerHTML = `
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    `;
+
+    // Add to navbar
+    const navActions = document.querySelector('.nav-actions');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (navActions) {
+        navActions.insertBefore(themeToggleBtn, navActions.firstChild);
+    }
+
+    if (mobileMenu) {
+        const themeRow = document.createElement('div');
+        themeRow.style.display = 'flex';
+        themeRow.style.justifyContent = 'space-between';
+        themeRow.style.alignItems = 'center';
+        themeRow.style.padding = '10px 0';
+        themeRow.style.borderTop = '1px solid var(--glass-border)';
+        themeRow.style.marginTop = '10px';
+        themeRow.innerHTML = '<span style="font-size: 0.9rem; font-weight: 500; color: var(--text-main);">Dark Mode</span>';
+
+        const mobileToggle = themeToggleBtn.cloneNode(true);
+        themeRow.appendChild(mobileToggle);
+        mobileMenu.appendChild(themeRow);
+
+        mobileToggle.addEventListener('click', () => {
+            toggleTheme();
+        });
+    }
+
+    // Check for saved theme or system preference
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    function toggleTheme() {
+        let theme = 'light';
+        if (document.documentElement.getAttribute('data-theme') !== 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            theme = 'dark';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+        localStorage.setItem('theme', theme);
+    }
+
+    themeToggleBtn.addEventListener('click', toggleTheme);
+
     // Current Year
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
@@ -17,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = mobileMenu.querySelectorAll('a');
 
     mobileToggle.addEventListener('click', () => {
@@ -173,4 +240,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Lightbox Functionality
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const body = document.body;
+
+    // Create Lightbox Element
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <button class="lightbox-close" aria-label="Close Lightbox">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <img src="" alt="Full size preview">
+    `;
+    body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('img');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+    sliderItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const imgSrc = item.querySelector('img').src;
+            const imgAlt = item.querySelector('img').alt;
+
+            lightboxImg.src = imgSrc;
+            lightboxImg.alt = imgAlt;
+            lightbox.classList.add('active');
+            body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        body.style.overflow = ''; // Restore scrolling
+    };
+
+    lightboxClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeLightbox();
+    });
+
+    lightbox.addEventListener('click', closeLightbox);
 });
