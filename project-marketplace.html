@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Integrated Accounting System - Portfolio</title>
+    <meta name="description" content="Project Case Study: Marketplace Integrated Accounting System">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-nav {
+            padding-top: 100px;
+            padding-bottom: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .bug-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--accent);
+        }
+
+        .bug-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8125rem;
+            color: var(--text-main);
+            min-width: 1200px;
+        }
+
+        .bug-table th {
+            background: #f1f5f9;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 1px solid #cbd5e1;
+            color: #334155;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .bug-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: middle;
+            color: #475569;
+        }
+
+        .bug-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            display: inline-block;
+        }
+
+        .status-pass {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .sev-high {
+            color: #991b1b;
+            font-weight: 700;
+        }
+
+        .sev-med {
+            color: #9a3412;
+            font-weight: 700;
+        }
+
+        .sev-low {
+            color: #166534;
+            font-weight: 700;
+        }
+
+        .type-tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(236, 72, 153, 0.1);
+            color: var(--primary);
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-pattern"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html#home" class="nav-logo" aria-label="Home" style="display: flex; align-items: center;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#pink-gradient)"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    style="transition: transform 0.3s; transform-origin: center;"
+                    onmouseover="this.style.transform='rotate(45deg) scale(1.1)'"
+                    onmouseout="this.style.transform='rotate(0deg) scale(1)'">
+                    <defs>
+                        <linearGradient id="pink-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ec4899" />
+                            <stop offset="100%" stop-color="#f472b6" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                        d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5" />
+                </svg>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#certificates">Certificates</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://drive.google.com/file/d/1o10Nbf_fr8JbyDMCIqY7S_isi_jAns8o/view?usp=sharing"
+                    target="_blank" class="btn-outline">Resume</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="nav-menu-mobile" id="mobile-menu">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#education">Education</a>
+                <a href="index.html#certificates">Certificates</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="https://drive.google.com/file/d/1o10Nbf_fr8JbyDMCIqY7S_isi_jAns8o/view?usp=sharing"
+                    target="_blank" class="btn-outline" style="text-align: center; justify-content: center;">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Case Study Section -->
+    <section>
+        <div class="container back-nav">
+            <a href="index.html#projects" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <div class="container reveal">
+            <div class="project-case-study">
+                <div class="case-header">
+                    <svg class="case-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-4H8l4-4 4 4h-3v4z"
+                            transform="rotate(180 12 12)" />
+                    </svg>
+                    <h3 class="case-title">Marketplace Integrated Accounting System</h3>
+                </div>
+
+                <div class="glass case-card details-card" style="padding: 24px; margin-bottom: 32px;">
+                    <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
+                        <span
+                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Role:</span>
+                        <span style="color: var(--text-muted);">Quality Assurance (QA Engineer)</span>
+                    </div>
+                    <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
+                        <span
+                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Platform:</span>
+                        <span style="color: var(--text-muted);">Web-Based Application</span>
+                    </div>
+                    <div style="display: flex; align-items: baseline;">
+                        <span
+                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Industry:</span>
+                        <span style="color: var(--text-muted);">E-Commerce / Financial Management</span>
+                    </div>
+                </div>
+
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4 style="display: flex; align-items: center; gap: 10px;">
+                        <span
+                            style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7em;">GB</span>
+                        Project Overview
+                    </h4>
+                    <p style="color: var(--text-muted); line-height: 1.6;">
+                        The <strong>Marketplace Integrated Accounting System</strong> is a web-based accounting
+                        application designed to manage financial transactions from online marketplaces such as Shopee
+                        and Lazada. The system automatically synchronizes sales data, records financial transactions,
+                        and generates financial reports to support business accounting processes.
+                    </p>
+                </div>
+
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4>Key Features Tested</h4>
+                    <ul>
+                        <li>Marketplace sales data synchronization (Shopee & Lazada)</li>
+                        <li>Automatic revenue recording from marketplace transactions</li>
+                        <li>Journal entry automation and transaction reconciliation</li>
+                        <li>Financial reporting and sales summary dashboards</li>
+                    </ul>
+                </div>
+
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4 style="display: flex; align-items: center; gap: 10px;">
+                        <span
+                            style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7em;">GB</span>
+                        Testing Approach
+                    </h4>
+                    <ul>
+                        <li>Requirement-based testing for accounting and integration workflows</li>
+                        <li>Integration testing for marketplace API synchronization</li>
+                        <li>End-to-end testing for sales-to-accounting processes</li>
+                        <li>Regression testing after feature updates</li>
+                    </ul>
+                </div>
+
+                <!-- Bug Documentation -->
+                <div class="glass case-card" style="margin-bottom: 32px; padding: 24px;">
+                    <h4 style="text-align: center; margin-bottom: 24px;">Bug Report Documentation</h4>
+                    <div class="bug-table-container">
+                        <table class="bug-table">
+                            <thead>
+                                <tr>
+                                    <th>BUG ID</th>
+                                    <th>Based on TC</th>
+                                    <th>Modul</th>
+                                    <th>Step by Step</th>
+                                    <th>Expected Result</th>
+                                    <th>Actual Result</th>
+                                    <th>Severity</th>
+                                    <th>Status</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>BUG.001</td>
+                                    <td>TC.Log.003</td>
+                                    <td>Auth</td>
+                                    <td>Login with invalid password format</td>
+                                    <td>Show validation error message</td>
+                                    <td>No validation message appears</td>
+                                    <td class="sev-med">Medium</td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="type-tag">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.007</td>
+                                    <td>TC.SD.001</td>
+                                    <td>Sidebar Area</td>
+                                    <td>Click dropdown and minimize sidebar</td>
+                                    <td>Minimizing sidebar works correctly</td>
+                                    <td>Sidebar layout breaks on minimize</td>
+                                    <td class="sev-high">Major</td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="type-tag">Frontend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.008</td>
+                                    <td>TC.DMUS.001</td>
+                                    <td>User Master</td>
+                                    <td>Click column sorting in user table</td>
+                                    <td>Table data should sort correctly</td>
+                                    <td>Sorting icon is transparent/hidden</td>
+                                    <td class="sev-high">Major</td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="type-tag">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.012</td>
+                                    <td>TC.DMUS.003</td>
+                                    <td>User Master</td>
+                                    <td>Input non-alphanumeric password</td>
+                                    <td>Validation message should appear</td>
+                                    <td>Still able to add non-alphanumeric</td>
+                                    <td class="sev-med">Medium</td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="type-tag">Backend</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> <strong>Eka Fahrika Nariswari</strong>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
