@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetic Membership System - Portfolio</title>
+    <meta name="description" content="Project Case Study: Cosmetic Membership System">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-nav {
+            padding-top: 100px;
+            padding-bottom: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-pattern"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html#home" class="nav-logo" aria-label="Home" style="display: flex; align-items: center;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#pink-gradient)"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    style="transition: transform 0.3s; transform-origin: center;"
+                    onmouseover="this.style.transform='rotate(45deg) scale(1.1)'"
+                    onmouseout="this.style.transform='rotate(0deg) scale(1)'">
+                    <defs>
+                        <linearGradient id="pink-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ec4899" />
+                            <stop offset="100%" stop-color="#f472b6" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                        d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5" />
+                </svg>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#certificates">Certificates</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://drive.google.com/file/d/1o10Nbf_fr8JbyDMCIqY7S_isi_jAns8o/view?usp=sharing"
+                    target="_blank" class="btn-outline">Resume</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="nav-menu-mobile" id="mobile-menu">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#education">Education</a>
+                <a href="index.html#certificates">Certificates</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="https://drive.google.com/file/d/1o10Nbf_fr8JbyDMCIqY7S_isi_jAns8o/view?usp=sharing"
+                    target="_blank" class="btn-outline" style="text-align: center; justify-content: center;">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Case Study Section -->
+    <section>
+        <div class="container back-nav">
+            <a href="index.html#projects" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <div class="container reveal">
+            <div class="project-case-study">
+                <div class="case-header">
+                    <svg class="case-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-4H8l4-4 4 4h-3v4z"
+                            transform="rotate(180 12 12)" />
+                    </svg>
+                    <h3 class="case-title">Cosmetic Membership System</h3>
+                </div>
+
+                <p class="case-desc">
+                    <strong>Cosmetic Membership System</strong> is a web application designed to manage cosmetic
+                    customer
+                    memberships by integrating customer and sales transaction data from TikTok Shop and Shopee. The
+                    system centralizes omnichannel data, automates loyalty point calculation, manages membership tiers,
+                    and provides reporting to improve customer retention and sales performance.
+                </p>
+
+                <!-- Details -->
+                <div class="glass case-card details-card" style="padding: 24px; margin-bottom: 32px;">
+                    <div style="display: flex; align-items: baseline; margin-bottom: 16px;">
+                        <span style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Project
+                            Type:</span>
+                        <span style="color: var(--text-muted);">Website</span>
+                    </div>
+                    <div style="display: flex; align-items: baseline; margin-bottom: 16px;">
+                        <span style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Team
+                            Size:</span>
+                        <span style="color: var(--text-muted); line-height: 1.5;">1 Project Manager, 1 Backend
+                            Developer, 1 Frontend Developer, 1 QA</span>
+                    </div>
+                    <div style="display: flex; align-items: baseline;">
+                        <span style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Role
+                            System:</span>
+                        <span style="color: var(--text-muted);">Customer, superadmin, admin</span>
+                    </div>
+                </div>
+
+                <!-- Scope & Responsibilities -->
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4>Scope & Responsibilities</h4>
+                    <ul>
+                        <li>Defined project scope, timeline, milestones, and deliverables</li>
+                        <li>Gathered requirements related to e-commerce integration and membership logic</li>
+                        <li>Coordinated backend, frontend, and QA teams</li>
+                        <li>Managed sprint planning, task allocation, and progress tracking</li>
+                        <li>Ensured data synchronization accuracy and consistency</li>
+                        <li>Managed risks, change requests, and issue resolution</li>
+                        <li>Coordinated UAT, deployment, and system handover</li>
+                    </ul>
+                </div>
+
+                <!-- Key Features Delivered -->
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4>Key Features Delivered</h4>
+                    <ul>
+                        <li>Automated transaction import from TikTok Shop and Shopee</li>
+                        <li>Customer data matching and deduplication</li>
+                        <li>Loyalty points calculation based on consolidated transactions</li>
+                        <li>Membership tier management</li>
+                        <li>Promotion and reward configuration</li>
+                        <li>Web-based membership and omnichannel sales dashboard</li>
+                    </ul>
+                </div>
+
+                <!-- Outcome & Impact -->
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4>Outcome & Impact</h4>
+                    <ul>
+                        <li>Unified omnichannel customer and transaction data into a single web platform</li>
+                        <li>Improved loyalty point calculation accuracy across sales channels</li>
+                        <li>Enabled data-driven promotions based on consolidated purchase behavior</li>
+                        <li>Project delivered on time with stable and scalable web architecture</li>
+                    </ul>
+                </div>
+
+                <!-- Visual Mockups -->
+                <div class="case-row grid-2-images">
+                    <div class="image-box">
+                        <h4>Daily progress monitoring</h4>
+                        <div class="sheet-mockup" style="max-width: 100%; height: auto;">
+                            <div class="sheet-row sheet-header"></div>
+                            <div class="sheet-row sheet-item">
+                                <div class="sheet-cell"></div>
+                                <div class="sheet-cell"></div>
+                                <div class="sheet-cell green"></div>
+                            </div>
+                            <div class="sheet-row sheet-item">
+                                <div class="sheet-cell"></div>
+                                <div class="sheet-cell"></div>
+                                <div class="sheet-cell light"></div>
+                            </div>
+                            <div class="sheet-row sheet-item">
+                                <div class="sheet-cell green"></div>
+                                <div class="sheet-cell green"></div>
+                                <div class="sheet-cell"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-box align-center">
+                        <h4>Task Management</h4>
+                        <div class="mobile-mockup">
+                            <div class="mobile-notch"></div>
+                            <div class="mobile-task">
+                                <div class="mark green"></div>
+                                <div class="task-line"></div>
+                            </div>
+                            <div class="mobile-task">
+                                <div class="mark red"></div>
+                                <div class="task-line"></div>
+                            </div>
+                            <div class="mobile-task">
+                                <div class="mark green"></div>
+                                <div class="task-line"></div>
+                            </div>
+                            <div class="mobile-fab"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> <strong>Eka Fahrika Nariswari</strong>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
