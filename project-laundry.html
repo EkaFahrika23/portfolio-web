@@ -116,7 +116,7 @@
     <!-- Case Study Section -->
     <section>
         <div class="container back-nav">
-            <a href="index.html#projects" class="back-link">
+            <a href="index.html?tab=qa#projects" class="back-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -132,36 +132,30 @@
                     <h3 class="case-title">Laundry Hotel Management System</h3>
                 </div>
 
+                <p class="case-desc">
+                    <strong>Laundry Hotel Management System</strong> is a web-based application designed to
+                    streamline hotel laundry operations, including laundry order management, item tracking, service
+                    pricing, and transaction recording. The system enables hotel staff to manage laundry workflows
+                    efficiently, monitor item status, and maintain accurate operational records.
+                </p>
+
+                <!-- Details -->
                 <div class="glass case-card details-card" style="padding: 24px; margin-bottom: 32px;">
                     <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Role:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Role:</span>
                         <span style="color: var(--text-muted);">Quality Assurance (QA Engineer)</span>
                     </div>
                     <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Platform:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Platform:</span>
                         <span style="color: var(--text-muted);">Web-Based Application</span>
                     </div>
                     <div style="display: flex; align-items: baseline;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Industry:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Industry:</span>
                         <span style="color: var(--text-muted);">Hospitality / Hotel Operations</span>
                     </div>
-                </div>
-
-                <div class="glass case-card list-card" style="margin-bottom: 32px;">
-                    <h4 style="display: flex; align-items: center; gap: 10px;">
-                        <span
-                            style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7em;">GB</span>
-                        Project Overview
-                    </h4>
-                    <p style="color: var(--text-muted); line-height: 1.6;">
-                        <strong>Laundry Hotel Management System</strong> is a web-based application designed to
-                        streamline hotel laundry operations, including laundry order management, item tracking, service
-                        pricing, and transaction recording. The system enables hotel staff to manage laundry workflows
-                        efficiently, monitor item status, and maintain accurate operational records.
-                    </p>
                 </div>
 
                 <!-- Project Slider -->
@@ -179,17 +173,15 @@
                 <div class="glass case-card list-card" style="margin-bottom: 32px;">
                     <h4>Key Features Tested</h4>
                     <ul>
-                        <li>Laundry order management</li>
-                        <li>Real-time laundry status tracking</li>
-                        <li>End-to-end laundry process monitoring (washing, drying, ironing, completeness check, and
-                            rewash handling)</li>
-                        <li>Inventory management for hotel laundry items</li>
-                        <li>Reporting dashboard for operational insights</li>
-                        <li>Web admin panel and Android mobile application</li>
+                        <li>Laundry order management and workflow tracking</li>
+                        <li>Item categorization and price list management</li>
+                        <li>Factory/warehouse synchronization for laundry processing</li>
+                        <li>Automated transaction recording and report generation</li>
+                        <li>User role-based access control for laundry staff</li>
                     </ul>
                 </div>
 
-                <div class="case-grid">
+                <div class="case-grid" style="margin-bottom: 32px;">
                     <div class="glass case-card list-card">
                         <h4>Testing Approach</h4>
                         <ul>
@@ -208,6 +200,93 @@
                             <li>Reduced operational errors through validated system processes</li>
                             <li>Supported smooth system deployment for hotel operational teams</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4>Bug Report Documentation</h4>
+                    <p style="margin-bottom: 20px; font-size: 0.95rem; color: var(--text-muted);">Comprehensive tracking
+                        of defects identified during the testing phase, including authentication, sidebar navigation,
+                        and user management modules.</p>
+                    <div class="table-container">
+                        <table style="min-width: 1200px;">
+                            <thead>
+                                <tr>
+                                    <th>BUG ID</th>
+                                    <th>Test Case ID</th>
+                                    <th>Modul</th>
+                                    <th>Step by Step</th>
+                                    <th>Expected Result</th>
+                                    <th>Actual Result</th>
+                                    <th>Severity</th>
+                                    <th>Priority</th>
+                                    <th>Status</th>
+                                    <th>Jenis Bug</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>BUG.001</td>
+                                    <td>TC.Log.003</td>
+                                    <td>Auth</td>
+                                    <td>Login with non-alphanumeric password format</td>
+                                    <td>Validation message "password must contain letters and numbers"</td>
+                                    <td>No validation error message shown</td>
+                                    <td><span class="severity medium">Medium</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.002</td>
+                                    <td>TC.Log.002</td>
+                                    <td>Auth</td>
+                                    <td>Empty login fields</td>
+                                    <td>Validation message "username/password is required"</td>
+                                    <td>Validation message doesn't match expected</td>
+                                    <td><span class="severity medium">Medium</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.003</td>
+                                    <td>TC.SD.001</td>
+                                    <td>Sidebar > Transaksi > Rewash</td>
+                                    <td>Click sub-sidebar rewash, optimize display</td>
+                                    <td>Rewash page opens, sidebar remains open</td>
+                                    <td>Sidebar closes unexpectedly when sub-sidebar clicked</td>
+                                    <td><span class="severity minor">Minor</span></td>
+                                    <td><span class="priority low">Low</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-frontend">Frontend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.007</td>
+                                    <td>TC.SD.001</td>
+                                    <td>Sidebar minimize</td>
+                                    <td>Click dropdown menus in minimize mode</td>
+                                    <td>Dropdown menus (transaksi, data master) should work</td>
+                                    <td>Dropdown menus are unresponsive in minimize mode</td>
+                                    <td><span class="severity major">Major</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-frontend">Frontend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.008</td>
+                                    <td>TC.DMUS.001</td>
+                                    <td>Master user > halaman utama</td>
+                                    <td>Click sorting filter column</td>
+                                    <td>Sorting filter button works correctly</td>
+                                    <td>Transparency issues and server errors on click</td>
+                                    <td><span class="severity major">Major</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 

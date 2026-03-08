@@ -116,7 +116,7 @@
     <!-- Case Study Section -->
     <section>
         <div class="container back-nav">
-            <a href="index.html#projects" class="back-link">
+            <a href="index.html?tab=qa#projects" class="back-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -132,36 +132,30 @@
                     <h3 class="case-title">FUOMO Creator Monetization Platform</h3>
                 </div>
 
+                <p class="case-desc">
+                    <strong>FUOMO</strong> is a web-based platform that enables digital creators to share content
+                    and monetize their work through fan support, paid content, and membership features. The system
+                    allows creators to manage their content, track supporter transactions, and monitor earnings
+                    through a centralized dashboard.
+                </p>
+
+                <!-- Details -->
                 <div class="glass case-card details-card" style="padding: 24px; margin-bottom: 32px;">
                     <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Role:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Role:</span>
                         <span style="color: var(--text-muted);">Quality Assurance (QA Engineer)</span>
                     </div>
                     <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Platform:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Platform:</span>
                         <span style="color: var(--text-muted);">Web-Based Application</span>
                     </div>
                     <div style="display: flex; align-items: baseline;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Industry:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Industry:</span>
                         <span style="color: var(--text-muted);">Creator Economy / Digital Content Monetization</span>
                     </div>
-                </div>
-
-                <div class="glass case-card list-card" style="margin-bottom: 32px;">
-                    <h4 style="display: flex; align-items: center; gap: 10px;">
-                        <span
-                            style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7em;">GB</span>
-                        Project Overview
-                    </h4>
-                    <p style="color: var(--text-muted); line-height: 1.6;">
-                        <strong>FUOMO</strong> is a web-based platform that enables digital creators to share content
-                        and monetize their work through fan support, paid content, and membership features. The system
-                        allows creators to manage their content, track supporter transactions, and monitor earnings
-                        through a centralized dashboard.
-                    </p>
                 </div>
 
                 <!-- Project Slider -->
@@ -188,7 +182,7 @@
                     </ul>
                 </div>
 
-                <div class="case-grid">
+                <div class="case-grid" style="margin-bottom: 32px;">
                     <div class="glass case-card list-card">
                         <h4>Testing Approach</h4>
                         <ul>
@@ -208,6 +202,95 @@
                             <li>Reduced system errors through structured testing and validation</li>
                             <li>Supported successful deployment of the platform for creators and supporters</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4>Bug Report Documentation</h4>
+                    <p style="margin-bottom: 20px; font-size: 0.95rem; color: var(--text-muted);">Comprehensive tracking
+                        of defects identified during functional testing of creator tools, content management, and
+                        payment processing modules.</p>
+                    <div class="table-container">
+                        <table style="min-width: 1200px;">
+                            <thead>
+                                <tr>
+                                    <th>BUG ID</th>
+                                    <th>Test Case ID</th>
+                                    <th>Modul</th>
+                                    <th>Step by Step</th>
+                                    <th>Expected Result</th>
+                                    <th>Actual Result</th>
+                                    <th>Severity</th>
+                                    <th>Priority</th>
+                                    <th>Status</th>
+                                    <th>Jenis Bug</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>BUG.001</td>
+                                    <td>TC.PROF.001</td>
+                                    <td>Creator Profile</td>
+                                    <td>Update profile picture with large file size</td>
+                                    <td>System should show error or compress image</td>
+                                    <td>Server timeout and profile becomes inaccessible</td>
+                                    <td><span class="severity major">Major</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.003</td>
+                                    <td>TC.CONT.002</td>
+                                    <td>Content Upload</td>
+                                    <td>Upload video content via mobile browser</td>
+                                    <td>Upload progress bar should be visible</td>
+                                    <td>Progress bar stuck at 0% while upload continues</td>
+                                    <td><span class="severity minor">Minor</span></td>
+                                    <td><span class="priority low">Low</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-frontend">Frontend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.005</td>
+                                    <td>TC.PAY.001</td>
+                                    <td>Payment Processing</td>
+                                    <td>Cancel payment during redirect</td>
+                                    <td>User returned to creator page with cancel status</td>
+                                    <td>System stuck on white screen after cancellation</td>
+                                    <td><span class="severity major">Major</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.008</td>
+                                    <td>TC.DASH.002</td>
+                                    <td>Creator Dashboard</td>
+                                    <td>Filter earnings by custom date range</td>
+                                    <td>Chart should update to show specific dates</td>
+                                    <td>Chart data overlaps and date range is ignored</td>
+                                    <td><span class="severity medium">Medium</span></td>
+                                    <td><span class="priority medium">Medium</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-frontend">Frontend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.010</td>
+                                    <td>TC.AUTH.003</td>
+                                    <td>Creator Onboarding</td>
+                                    <td>Register with existing email via Social Login</td>
+                                    <td>Show "Email already exists" warning</td>
+                                    <td>Duplicate accounts created with same email</td>
+                                    <td><span class="severity critical"
+                                            style="background: rgba(153, 27, 27, 0.1); color: #dc2626;">Critical</span>
+                                    </td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 

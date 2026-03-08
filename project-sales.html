@@ -116,7 +116,7 @@
     <!-- Case Study Section -->
     <section>
         <div class="container back-nav">
-            <a href="index.html#projects" class="back-link">
+            <a href="index.html?tab=qa#projects" class="back-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -132,37 +132,31 @@
                     <h3 class="case-title">Online Product Sales System</h3>
                 </div>
 
+                <p class="case-desc">
+                    <strong>Online Product Sales System</strong> is a mobile and web-based application designed to
+                    manage online product sales, including product catalog management, customer transactions, order
+                    processing, and payment handling. The system allows customers to browse products, place orders,
+                    and complete payments through the mobile application, while administrators manage products,
+                    orders, and reports through the web dashboard.
+                </p>
+
+                <!-- Details -->
                 <div class="glass case-card details-card" style="padding: 24px; margin-bottom: 32px;">
                     <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Role:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Role:</span>
                         <span style="color: var(--text-muted);">Quality Assurance (QA Engineer)</span>
                     </div>
                     <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Platform:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Platform:</span>
                         <span style="color: var(--text-muted);">Mobile Application & Web-Based System</span>
                     </div>
                     <div style="display: flex; align-items: baseline;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Industry:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Industry:</span>
                         <span style="color: var(--text-muted);">E-Commerce / Online Retail</span>
                     </div>
-                </div>
-
-                <div class="glass case-card list-card" style="margin-bottom: 32px;">
-                    <h4 style="display: flex; align-items: center; gap: 10px;">
-                        <span
-                            style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7em;">GB</span>
-                        Project Overview
-                    </h4>
-                    <p style="color: var(--text-muted); line-height: 1.6;">
-                        <strong>Online Product Sales System</strong> is a mobile and web-based application designed to
-                        manage online product sales, including product catalog management, customer transactions, order
-                        processing, and payment handling. The system allows customers to browse products, place orders,
-                        and complete payments through the mobile application, while administrators manage products,
-                        orders, and reports through the web dashboard.
-                    </p>
                 </div>
 
                 <!-- Project Slider -->
@@ -188,7 +182,7 @@
                     </ul>
                 </div>
 
-                <div class="case-grid">
+                <div class="case-grid" style="margin-bottom: 32px;">
                     <div class="glass case-card list-card">
                         <h4>Testing Approach</h4>
                         <ul>
@@ -209,6 +203,95 @@
                             <li>Reduced transaction errors through structured testing and validation</li>
                             <li>Supported smooth system deployment for customers and business operations</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4>Bug Report Documentation</h4>
+                    <p style="margin-bottom: 20px; font-size: 0.95rem; color: var(--text-muted);">Comprehensive tracking
+                        of defects identified during functional testing of e-commerce checkout, payment integration, and
+                        inventory management modules.</p>
+                    <div class="table-container">
+                        <table style="min-width: 1200px;">
+                            <thead>
+                                <tr>
+                                    <th>BUG ID</th>
+                                    <th>Test Case ID</th>
+                                    <th>Modul</th>
+                                    <th>Step by Step</th>
+                                    <th>Expected Result</th>
+                                    <th>Actual Result</th>
+                                    <th>Severity</th>
+                                    <th>Priority</th>
+                                    <th>Status</th>
+                                    <th>Jenis Bug</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>BUG.004</td>
+                                    <td>TC.CART.002</td>
+                                    <td>Shopping Cart</td>
+                                    <td>Update quantity of item in cart simultaneously from two devices</td>
+                                    <td>Cart should sync correctly or show "out of sync"</td>
+                                    <td>Quantity becomes negative after multiple updates</td>
+                                    <td><span class="severity major">Major</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.006</td>
+                                    <td>TC.PAY.003</td>
+                                    <td>Payment Gateway</td>
+                                    <td>Process payment with network timeout during callback</td>
+                                    <td>Order status should remain "pending" until verified</td>
+                                    <td>Order status automatically changed to "failed" and deducted stock</td>
+                                    <td><span class="severity critical"
+                                            style="background: rgba(153, 27, 27, 0.1); color: #dc2626;">Critical</span>
+                                    </td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.009</td>
+                                    <td>TC.SRCH.001</td>
+                                    <td>Search</td>
+                                    <td>Search product with special characters (!@#$%^*)</td>
+                                    <td>Show "No products found" or handle gracefully</td>
+                                    <td>Raw SQL error displayed on search results page</td>
+                                    <td><span class="severity major">Major</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.012</td>
+                                    <td>TC.DASH.003</td>
+                                    <td>Admin Dashboard</td>
+                                    <td>Export 10,000+ sales records to Excel</td>
+                                    <td>Excel file generated successfully in background</td>
+                                    <td>Memory exhausted error on server during export</td>
+                                    <td><span class="severity medium">Medium</span></td>
+                                    <td><span class="priority medium">Medium</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.015</td>
+                                    <td>TC.UI.005</td>
+                                    <td>Mobile Application</td>
+                                    <td>Rotate device to landscape on checkout page</td>
+                                    <td>Layout should adjust to landscape view</td>
+                                    <td>Checkout button goes off-screen and is inaccessible</td>
+                                    <td><span class="severity minor">Minor</span></td>
+                                    <td><span class="priority low">Low</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-frontend">Frontend</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 

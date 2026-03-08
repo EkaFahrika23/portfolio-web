@@ -200,6 +200,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Handle direct tab navigation via URL hash or parameter
+    function handleTabNavigation() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const tabParam = urlParams.get('tab');
+        const hash = window.location.hash;
+
+        if (tabParam === 'qa' || hash === '#tab-qa' || hash === '#qa') {
+            const qaBtn = document.querySelector('.nav-tab-btn[data-target="tab-qa"]');
+            if (qaBtn) qaBtn.click();
+        } else if (tabParam === 'pm' || hash === '#tab-pm' || hash === '#pm') {
+            const pmBtn = document.querySelector('.nav-tab-btn[data-target="tab-pm"]');
+            if (pmBtn) pmBtn.click();
+        }
+    }
+
+    // Run on load
+    handleTabNavigation();
+
     // View All Projects Toggle
     const viewAllBtns = document.querySelectorAll('.view-all-btn');
 

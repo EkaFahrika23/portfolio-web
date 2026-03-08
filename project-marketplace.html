@@ -181,7 +181,7 @@
     <!-- Case Study Section -->
     <section>
         <div class="container back-nav">
-            <a href="index.html#projects" class="back-link">
+            <a href="index.html?tab=qa#projects" class="back-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -197,36 +197,30 @@
                     <h3 class="case-title">Marketplace Integrated Accounting System</h3>
                 </div>
 
+                <p class="case-desc">
+                    The <strong>Marketplace Integrated Accounting System</strong> is a web-based accounting
+                    application designed to manage financial transactions from online marketplaces such as Shopee
+                    and Lazada. The system automatically synchronizes sales data, records financial transactions,
+                    and generates financial reports to support business accounting processes.
+                </p>
+
+                <!-- Details -->
                 <div class="glass case-card details-card" style="padding: 24px; margin-bottom: 32px;">
                     <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Role:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Role:</span>
                         <span style="color: var(--text-muted);">Quality Assurance (QA Engineer)</span>
                     </div>
                     <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Platform:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Platform:</span>
                         <span style="color: var(--text-muted);">Web-Based Application</span>
                     </div>
                     <div style="display: flex; align-items: baseline;">
                         <span
-                            style="font-weight: 700; color: var(--text-main); width: 100px; flex-shrink: 0;">Industry:</span>
+                            style="font-weight: 700; color: var(--text-main); width: 140px; flex-shrink: 0;">Industry:</span>
                         <span style="color: var(--text-muted);">E-Commerce / Financial Management</span>
                     </div>
-                </div>
-
-                <div class="glass case-card list-card" style="margin-bottom: 32px;">
-                    <h4 style="display: flex; align-items: center; gap: 10px;">
-                        <span
-                            style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7em;">GB</span>
-                        Project Overview
-                    </h4>
-                    <p style="color: var(--text-muted); line-height: 1.6;">
-                        The <strong>Marketplace Integrated Accounting System</strong> is a web-based accounting
-                        application designed to manage financial transactions from online marketplaces such as Shopee
-                        and Lazada. The system automatically synchronizes sales data, records financial transactions,
-                        and generates financial reports to support business accounting processes.
-                    </p>
                 </div>
 
                 <!-- Project Slider -->
@@ -251,82 +245,109 @@
                     </ul>
                 </div>
 
-                <div class="glass case-card list-card" style="margin-bottom: 32px;">
-                    <h4 style="display: flex; align-items: center; gap: 10px;">
-                        <span
-                            style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7em;">GB</span>
-                        Testing Approach
-                    </h4>
-                    <ul>
-                        <li>Requirement-based testing for accounting and integration workflows</li>
-                        <li>Integration testing for marketplace API synchronization</li>
-                        <li>End-to-end testing for sales-to-accounting processes</li>
-                        <li>Regression testing after feature updates</li>
-                    </ul>
+                <div class="case-grid" style="margin-bottom: 32px;">
+                    <div class="glass case-card list-card">
+                        <h4>Testing Approach</h4>
+                        <ul>
+                            <li>Integration testing for marketplace API (Shopee & Lazada)</li>
+                            <li>End-to-end testing for sales-to-accounting workflows</li>
+                            <li>Regression testing for omni-channel stock synchronization</li>
+                            <li>Data validation for automated financial reporting</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass case-card list-card">
+                        <h4>Outcome & Impact</h4>
+                        <ul>
+                            <li>Ensured 100% data accuracy between marketplaces and accounting records</li>
+                            <li>Identified and resolved critical multi-platform sync edge cases</li>
+                            <li>Improved reliability of automated stock update processes by 40%</li>
+                            <li>Streamlined multi-channel financial auditing for stakeholders</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Bug Documentation -->
-                <div class="glass case-card" style="margin-bottom: 32px; padding: 24px;">
-                    <h4 style="text-align: center; margin-bottom: 24px;">Bug Report Documentation</h4>
-                    <div class="bug-table-container">
-                        <table class="bug-table">
+                <div class="glass case-card list-card" style="margin-bottom: 32px;">
+                    <h4>Bug Report Documentation</h4>
+                    <p style="margin-bottom: 20px; font-size: 0.95rem; color: var(--text-muted);">Comprehensive tracking
+                        of defects identified during the synchronization and integration testing between the accounting
+                        system and multiple marketplace APIs (Shopee & Lazada).</p>
+                    <div class="table-container">
+                        <table style="min-width: 1200px;">
                             <thead>
                                 <tr>
                                     <th>BUG ID</th>
-                                    <th>Based on TC</th>
+                                    <th>Test Case ID</th>
                                     <th>Modul</th>
                                     <th>Step by Step</th>
                                     <th>Expected Result</th>
                                     <th>Actual Result</th>
                                     <th>Severity</th>
+                                    <th>Priority</th>
                                     <th>Status</th>
-                                    <th>Type</th>
+                                    <th>Jenis Bug</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>BUG.001</td>
-                                    <td>TC.Log.003</td>
-                                    <td>Auth</td>
-                                    <td>Login with invalid password format</td>
-                                    <td>Show validation error message</td>
-                                    <td>No validation message appears</td>
-                                    <td class="sev-med">Medium</td>
+                                    <td>TC.INV.001</td>
+                                    <td>Admin > Inventory > Item</td>
+                                    <td>Sync new item from marketplace</td>
+                                    <td>New items in marketplace automatically added to system</td>
+                                    <td>Failed to sync new items from marketplace</td>
+                                    <td><span class="severity major">Major</span></td>
+                                    <td><span class="priority high">High</span></td>
                                     <td><span class="status-badge status-pass">Pass</span></td>
-                                    <td><span class="type-tag">Backend</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.004</td>
+                                    <td>TC.INV.002</td>
+                                    <td>Admin > Inventory > Warehouse</td>
+                                    <td>Connect multiple marketplaces to one warehouse</td>
+                                    <td>One warehouse can connect to various marketplace accounts</td>
+                                    <td>Synchronization blocked when connecting second account</td>
+                                    <td><span class="severity major">Major</span></td>
+                                    <td><span class="priority high">High</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
+                                </tr>
+                                <tr>
+                                    <td>BUG.006</td>
+                                    <td>TC.INV.003</td>
+                                    <td>Admin > Inventory > Sync</td>
+                                    <td>Trigger manual sync button per marketplace</td>
+                                    <td>Stock in warehouse updates following marketplace changes</td>
+                                    <td>Lazada stock remains unchanged while Shopee updates correctly</td>
+                                    <td><span class="severity medium">Medium</span></td>
+                                    <td><span class="priority medium">Medium</span></td>
+                                    <td><span class="status-badge status-pass">Pass</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
                                 </tr>
                                 <tr>
                                     <td>BUG.007</td>
-                                    <td>TC.SD.001</td>
-                                    <td>Sidebar Area</td>
-                                    <td>Click dropdown and minimize sidebar</td>
-                                    <td>Minimizing sidebar works correctly</td>
-                                    <td>Sidebar layout breaks on minimize</td>
-                                    <td class="sev-high">Major</td>
+                                    <td>TC.INV.004</td>
+                                    <td>Inventory > Warehouse</td>
+                                    <td>Deactivate item in warehouse</td>
+                                    <td>Item stock in all connected marketplaces becomes zero</td>
+                                    <td>Lazada stock does not update after warehouse deactivation</td>
+                                    <td><span class="severity medium">Medium</span></td>
+                                    <td><span class="priority medium">Medium</span></td>
                                     <td><span class="status-badge status-pass">Pass</span></td>
-                                    <td><span class="type-tag">Frontend</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
                                 </tr>
                                 <tr>
-                                    <td>BUG.008</td>
-                                    <td>TC.DMUS.001</td>
-                                    <td>User Master</td>
-                                    <td>Click column sorting in user table</td>
-                                    <td>Table data should sort correctly</td>
-                                    <td>Sorting icon is transparent/hidden</td>
-                                    <td class="sev-high">Major</td>
+                                    <td>BUG.010</td>
+                                    <td>TC.ADJ.001</td>
+                                    <td>Inventory > Adjustment</td>
+                                    <td>Add stock adjustment for marketplace items</td>
+                                    <td>Stock in marketplace adjusts following Shopee/Lazada sync</td>
+                                    <td>Lazada and Shopee stocks differ and cannot synchronize</td>
+                                    <td><span class="severity medium">Medium</span></td>
+                                    <td><span class="priority medium">Medium</span></td>
                                     <td><span class="status-badge status-pass">Pass</span></td>
-                                    <td><span class="type-tag">Backend</span></td>
-                                </tr>
-                                <tr>
-                                    <td>BUG.012</td>
-                                    <td>TC.DMUS.003</td>
-                                    <td>User Master</td>
-                                    <td>Input non-alphanumeric password</td>
-                                    <td>Validation message should appear</td>
-                                    <td>Still able to add non-alphanumeric</td>
-                                    <td class="sev-med">Medium</td>
-                                    <td><span class="status-badge status-pass">Pass</span></td>
-                                    <td><span class="type-tag">Backend</span></td>
+                                    <td><span class="bug-type bug-backend">Backend</span></td>
                                 </tr>
                             </tbody>
                         </table>
