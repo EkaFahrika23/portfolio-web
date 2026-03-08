@@ -9,7 +9,7 @@
 
     <script>
         (function () {
-            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             if (savedTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
@@ -112,7 +112,7 @@
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <a href="#experience" class="btn-outline">View My Work</a>
+                    <a href="#projects" class="btn-outline">View My Work</a>
                 </div>
 
                 <!-- <div class="social-links">
@@ -140,13 +140,13 @@
             </div>
         </div>
 
-        <!-- <a href="#experience" class="scroll-down">
+        <a href="#experience" class="scroll-down">
             <span>Scroll Down</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
             </svg>
-        </a> -->
+        </a>
     </section>
 
     <!-- Experience Section -->

@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Check for saved theme or system preference
-    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
 
     if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
