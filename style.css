@@ -1912,13 +1912,14 @@ footer strong {
 
     .about-grid,
     .projects-grid,
-    .cert-grid {
+    .cert-grid,
+    .projects-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .projects-list .project-item {
-        min-width: calc((100% - 32px) / 2);
-        max-width: calc((100% - 32px) / 2);
+        min-width: unset;
+        max-width: unset;
     }
 
     .exp-header,
@@ -1982,9 +1983,33 @@ footer strong {
         grid-template-columns: 1fr;
     }
 
+    .projects-list {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 10px 4px 30px;
+        margin: 0 -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .projects-list::-webkit-scrollbar {
+        display: none;
+    }
+
     .projects-list .project-item {
+        flex: 0 0 85%;
         min-width: 85%;
         max-width: 85%;
+        scroll-snap-align: center;
+    }
+
+    /* Disable hover-hint on mobile to prevent overlapping/dark appearance */
+    .hover-hint {
+        display: none !important;
     }
 
     .section-title {
