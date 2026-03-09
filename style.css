@@ -71,38 +71,6 @@ body {
     height: 20px;
 }
 
-/* Language Switcher Style */
-.lang-switcher {
-    display: flex;
-    gap: 4px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 4px;
-    border-radius: 12px;
-}
-
-.lang-btn {
-    padding: 6px 10px;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    transition: all 0.3s ease;
-}
-
-.lang-btn.active {
-    background: var(--primary);
-    color: white;
-}
-
-.lang-btn:hover:not(.active) {
-    background: rgba(236, 72, 153, 0.1);
-    color: var(--primary);
-}
-
 [data-theme='dark'] .sun-icon {
     display: block;
 }
