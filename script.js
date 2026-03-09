@@ -175,28 +175,38 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkReveals);
     checkReveals(); // Check on load
 
-    // Tab Switching Logic for Projects
+    // Tab Switching Function
     const tabBtns = document.querySelectorAll('.nav-tab-btn');
     const tabContents = document.querySelectorAll('.project-tab-content');
 
+    function switchTab(targetId) {
+        const btn = document.querySelector(`.nav-tab-btn[data-target="${targetId}"]`);
+        const content = document.getElementById(targetId);
+
+        if (!btn || !content) return;
+
+        // Remove active class from all buttons and contents
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => {
+            c.style.display = 'none';
+            c.classList.remove('active');
+        });
+
+        // Add active class to clicked button and content
+        btn.classList.add('active');
+        content.style.display = 'block';
+        content.classList.add('active');
+
+        // Trigger animation
+        content.style.animation = 'none';
+        content.offsetHeight; /* trigger reflow */
+        content.style.animation = null;
+    }
+
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active class from all buttons and contents
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.style.display = 'none');
-
-            // Add active class to clicked button
-            btn.classList.add('active');
-
-            // Show target content
             const targetId = btn.getAttribute('data-target');
-            document.getElementById(targetId).style.display = 'block';
-
-            // Trigger animation
-            const targetContent = document.getElementById(targetId);
-            targetContent.style.animation = 'none';
-            targetContent.offsetHeight; /* trigger reflow */
-            targetContent.style.animation = null;
+            switchTab(targetId);
         });
     });
 
@@ -206,12 +216,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const tabParam = urlParams.get('tab');
         const hash = window.location.hash;
 
+        // Check for QA tab requested explicitly
         if (tabParam === 'qa' || hash === '#tab-qa' || hash === '#qa') {
-            const qaBtn = document.querySelector('.nav-tab-btn[data-target="tab-qa"]');
-            if (qaBtn) qaBtn.click();
-        } else if (tabParam === 'pm' || hash === '#tab-pm' || hash === '#pm') {
-            const pmBtn = document.querySelector('.nav-tab-btn[data-target="tab-pm"]');
-            if (pmBtn) pmBtn.click();
+            switchTab('tab-qa');
+        } else {
+            // Default behavior: Always show Project Manager tab
+            switchTab('tab-pm');
         }
     }
 
